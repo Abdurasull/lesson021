@@ -26,20 +26,22 @@ int main(){
         printf("%d-mashina yilini kiriting: ", i + 1);
         scanf("%d", &cars[i].year);
     }
-    int max = cars[0].price;
+    int max = cars[0].price, max_index = 0;
     printf("Eng qimmat mashina:\nModel       | Brand     | Price   | Year");
     for (int i = 0; i < n; i++)
     {
         if (max <= cars[i].price )
         {
-            printf("\n%12s", cars[i].model);
-
-            printf("| %10s", cars[i].brand);
-
-            printf("| %8d", cars[i].price);
-
-            printf("| %d", cars[i].year);
+            max = cars[i].price;
+            max_index = i;
         }
         
     }
+    printf("\n%12s", cars[max_index].model);
+
+    printf("| %10s", cars[max_index].brand);
+
+    printf("| %8d", cars[max_index].price);
+
+    printf("| %d", cars[max_index].year);
 }
