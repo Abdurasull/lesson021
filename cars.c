@@ -36,7 +36,7 @@ int main(){
 
             printf("| %10s", cars[i].brand);
 
-            printf("| %8d", &cars[i].price);
+            printf("| %8d", cars[i].price);
 
             printf("| %d", cars[i].year);
         }
